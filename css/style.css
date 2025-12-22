@@ -1,3 +1,13 @@
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --brand-blue: #00296b;
 }
@@ -19,11 +29,32 @@ body {
     font-family: Poppins, Clean, geometric, sans-serif;
     scroll-behavior: smooth;
 }
-
-img:hover {
-    transform: scale(1.02);
-    transition: 0.4s ease;
+@media (hover: hover) and (pointer: fine) {
+    img:hover {
+        transform: scale(1.02);
+        transition: 0.4s ease;
+    }
 }
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 /* About Section */
 .counter {
@@ -123,8 +154,10 @@ img:hover {
 .testimonial-track {
     display: flex;
     gap: 24px;
-    animation: scroll-left 40s linear infinite;
+    width: max-content;
+    will-change: transform;
 }
+
 
 .testimonial-slider:hover .testimonial-track {
     animation-play-state: paused;
@@ -190,10 +223,18 @@ img:hover {
     font-size: 15px;
 }
 
-.pricing-featured {
-    border: 2px solid #00296b;
-    transform: scale(1.05);
+@media (min-width: 992px) {
+    .pricing-featured {
+        transform: scale(1.05);
+    }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 /* Contact Icons */
 .icon-box {
