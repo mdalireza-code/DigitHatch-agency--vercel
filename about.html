@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg shadow sticky-top ">
+        <div class="container">
+            <a class="navbar-brand fs-2 fw-bold text-light" href="index.html">DigitHatch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars-staggered text-light"></i></span>
+            </button>
+            <div class="collapse navbar-collapse fs-5" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="project.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero d-flex align-items-lg-center">
+        <div class="container text-center">
+            <!-- Heading -->
+            <h1 class="about-title fw-bold">
+                About Us
+            </h1>
+            <!-- Description -->
+            <p class="about-text mx-auto mt-4">
+                We're a creative agency fueled by passion and purpose. We partner with brands
+                to craft unforgettable experiences and meaningful connections. From concept
+                to execution, we blend strategic thinking with innovative design to deliver
+                results that don't just look good — they perform. Let's create something
+                extraordinary together.
+            </p>
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+                <a href="services.html" class="btn btn-primary px-4 py-3">
+                    Our Services
+                </a>
+                <a href="contact.html" class="btn btn-outline-primary px-4 py-3">
+                    Get Free Consultation
+                </a>
+            </div>
+            <!-- Image -->
+            <div class="about-image-wrapper mt-5">
+                <img src="images/hero/about-team.jpg" alt="About Team" class="img-fluid about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Stats Section -->
+    <section class="about-stats py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon mb-3">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <h3 class="fw-bold counter" data-target="200" data-suffix="+">0+</h3>
+                        <p>We deliver great work<br>always</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon mb-3">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="fw-bold counter" data-target="10" data-suffix="+">0+</h3>
+                        <p>Experience you can<br>count on</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon mb-3">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="fw-bold counter" data-target="20" data-suffix="+">0+</h3>
+                        <p>Award-Winning Work,<br>Trusted Results</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card h-100">
+                        <div class="stat-icon mb-3">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 class="fw-bold counter" data-target="5000" data-format="k">0+</h3>
+                        <p>We have happy Clients<br>worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Feature Section -->
+    <section class="about-feature py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- LEFT IMAGE -->
+                <div class="col-lg-6">
+                    <div class="about-image-shape">
+                        <img src="images/hero/about-feature.jpg" alt="About Image" class="img-fluid">
+                    </div>
+                </div>
+                <!-- RIGHT CONTENT -->
+                <div class="col-lg-6">
+
+                    <span class="badge about-badge bg-primary text-light mb-3">
+                        <i class="fa-solid fa-cube me-1"></i> About Us
+                    </span>
+                    <h2 class="about-heading mt-3">
+                        Your Success, Our Priority.
+                    </h2>
+                    <p class="about-desc mt-3">
+                        We're dedicated to helping you achieve your goals with a simple,
+                        user-friendly experience. We believe our commitment to your
+                        success sets us apart.
+                    </p>
+                    <!-- FEATURES -->
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-6">
+                            <div class="about-item">
+                                <h6>Innovate to Lead</h6>
+                                <p>
+                                    Foster creativity and embrace innovation to stay
+                                    ahead of the competition.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-item">
+                                <h6>Optimize for Growth</h6>
+                                <p>
+                                    Streamline processes and resources to maximize
+                                    efficiency and profitability.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-item">
+                                <h6>Engage with Purpose</h6>
+                                <p>
+                                    Build meaningful relationships with customers
+                                    through authentic engagement.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-item">
+                                <h6>Scale with Strategy</h6>
+                                <p>
+                                    Expand your business by implementing structured,
+                                    scalable plans.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- BUTTON -->
+                    <a href="#" class="btn btn-primary px-4 py-3 mt-4">
+                        Start Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 shadow ">
+        <!-- Dark Header -->
+        <div class="text-light py-5">
+            <div class="container text-center">
+                <span class="badge bg-primary text-light rounded-pill px-3 py-2 mb-3">
+                    <i class="fa-solid fa-cube me-1 "></i> Services
+                </span>
+                <h2 class="fw-bold display-5 mt-3 text-dark">
+                    Your Needs, Our Expertise
+                </h2>
+                <p class="lead text-dark mt-3 mx-auto" style="max-width: 700px;">
+                    Your Vision, Our Expertise — Together, we bring ideas to life with tailored
+                    solutions that deliver real results. Let’s build something amazing.
+                </p>
+            </div>
+        </div>
+        <!-- Cards -->
+        <div class="container py-5 ">
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon bg-primary text-light">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h4 class="fw-bold mt-4">Custom Website Development</h4>
+                        <p class="text-muted mt-3">
+                            Tailor-made websites built to match your business goals, brand identity, and user needs
+                            using modern technologies.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon bg-primary text-light">
+                            <i class="fa-regular fa-object-ungroup"></i>
+                        </div>
+                        <h4 class="fw-bold mt-4">UI/UX Design</h4>
+                        <p class="text-muted mt-3">
+                            User-centered interface and experience design focused on usability, accessibility, and
+                            conversion optimization.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon bg-primary text-light">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4 class="fw-bold mt-4">Frontend Development</h4>
+                        <p class="text-muted mt-3">
+                            High-performance, interactive interfaces using HTML, CSS, JavaScript, Bootstrap, React, or
+                            similar frameworks.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon bg-primary text-light">
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </div>
+                        <h4 class="fw-bold mt-4">Backend Development</h4>
+                        <p class="text-muted mt-3">
+                            Secure and scalable server-side development with APIs, databases, authentication, and
+                            business logic integration.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon bg-primary text-light">
+                            <i class="fa-solid fa-headset fs-4"></i>
+                        </div>
+                        <h4 class="fw-bold mt-4">Website Maintenance & Support</h4>
+                        <p class="text-muted mt-3">
+                            Ongoing updates, performance optimization, security patches, and technical support to keep
+                            your site running smoothly.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="icon bg-primary text-light">
+                            <i class="fa-solid fa-chart-line fs-4"></i>
+                        </div>
+                        <h4 class="fw-bold mt-4">Search Engine Optimization</h4>
+                        <p class="text-muted mt-3">
+                            Search Engine Optimization (SEO) is the process of improving your website’s visibility on
+                            search engines like Google, helping you attract more organic traffic and qualified leads.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 ">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Brand / About -->
+                <div class="col-lg-4 col-md-12 order-1">
+                    <h4 class="footer-logo text-light">DigitHatch</h4>
+                    <p class="text-light mt-3">
+                        We are a creative digital agency focused on building
+                        modern, user-friendly, and high-performing digital
+                        experiences.
+                    </p>
+                    <div class="footer-social mt-3 d-flex justify-content-center justify-content-md-start">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 order-2">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 order-3">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Brand Identity</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 order-4">
+                    <h6 class="footer-title">Contact</h6>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Sapahar,Rajshahi,Bangladesh
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            +880 1317 034785
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            info@digithatch.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="footer-bottom text-center mt-5 pt-3">
+                <p class="mb-0">
+                    © 2025 DigitHatch. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

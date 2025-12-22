@@ -1,0 +1,332 @@
+:root {
+    --brand-blue: #00296b;
+}
+
+.navbar {
+    background-color: #0B5ED7;
+}
+/* .navbar-brand{
+    color: prima;
+} */
+
+.border-brand {
+    border: 3px solid var(--brand-blue);
+}
+
+
+body {
+    background-color: #FFFFFF;
+    font-family: Poppins, Clean, geometric, sans-serif;
+    scroll-behavior: smooth;
+}
+
+img:hover {
+    transform: scale(1.02);
+    transition: 0.4s ease;
+}
+
+/* About Section */
+.counter {
+    transition: color 0.3s ease;
+}
+
+
+/* Service section */
+
+.service-card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-card .icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* Working Process section */
+
+.process-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.step-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #d6d6d6;
+}
+
+/* Initial hidden state */
+.reveal-step {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: all 0.5s ease;
+}
+
+/* When visible */
+.reveal-step.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* project section */
+.project-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.project-img {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.project-img img {
+    width: 100%;
+    transition: transform 4s ease;
+}
+
+/* 🔥 AUTO SCROLL EFFECT ON HOVER */
+.project-card:hover .project-img img {
+    transform: translateY(-40%);
+}
+
+/* testimonial section */
+.testimonial-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 24px;
+    animation: scroll-left 40s linear infinite;
+}
+
+.testimonial-slider:hover .testimonial-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-card {
+    min-width: 320px;
+    background: #f9f9fb;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e6e6e6;
+}
+
+.stars {
+    color: #f4b400;
+    margin-bottom: 10px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.client img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client small {
+    display: block;
+    color: #6c757d;
+}
+
+/* Pricing Section */
+.pricing-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.pricing-featured {
+    border: 2px solid #00296b;
+    transform: scale(1.05);
+}
+
+/* Contact Icons */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background: #0B5ED7;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Form */
+.contact-form .form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #00296b;
+    box-shadow: 0 0 0 0.15rem rgba(0, 41, 107, 0.15);
+}
+
+/* Footer Section */
+.footer {
+    background: #0B5ED7;
+    color: #ffffff;
+}
+
+/* Logo */
+.footer-logo {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Titles */
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Links */
+.footer-links,
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cfd8ff;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Contact */
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #cfd8ff;
+}
+
+.footer-contact i {
+    color: #ffffff;
+}
+
+/* Social Icons */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #00296b;
+    margin-right: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.footer-social a:hover {
+    background: #cfd8ff;
+    transform: translateY(-3px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #cfd8ff;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-social a {
+        margin: 0 6px 10px;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footer-title {
+        margin-top: 20px;
+    }
+}
+

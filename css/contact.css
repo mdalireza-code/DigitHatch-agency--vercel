@@ -1,0 +1,33 @@
+/* Contact Hero */
+.contact-hero {
+    background-color: #ffffff;
+    padding: 6rem 0;
+}
+
+/* Full height only on lg */
+@media (min-width: 992px) {
+    .contact-hero {
+        min-height: 60vh;
+    }
+}
+
+/* Title */
+.contact-title {
+    font-size: 6rem;
+    color: #111;
+}
+
+/* Description */
+.contact-desc {
+    max-width: 900px;
+    font-size: 1.5rem;
+    color: #5f6368;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.6rem;
+    }
+}

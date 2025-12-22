@@ -1,0 +1,31 @@
+/* Project Hero – Same as About */
+.project-hero {
+    background-color: #ffffff;
+    padding: 6rem 0;
+}
+
+/* Full height only on lg */
+@media (min-width: 992px) {
+    .project-hero {
+        min-height: 100vh;
+    }
+}
+
+.project-title {
+    font-size: 4rem;
+    color: #111;
+}
+
+.project-desc {
+    max-width: 900px;
+    font-size: 1.1rem;
+    color: #5f6368;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2.6rem;
+    }
+}
