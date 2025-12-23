@@ -681,33 +681,35 @@ body.dark-mode small {
     color: #9ca3af !important;
 }
 
-
 /* ================================
-   MOBILE OVERFLOW FIX (FINAL)
+   FINAL SAFE OVERFLOW FIX
 ================================ */
 html,
 body {
     width: 100%;
-    overflow-x: hidden !important;
-}
-
-.container,
-.container-fluid,
-section {
+    max-width: 100%;
     overflow-x: hidden;
 }
 
+/* Prevent elements from exceeding screen */
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Slider safety */
 .testimonial-slider {
-    overflow-x: hidden;
+    overflow: hidden;
+    width: 100%;
 }
 
 .testimonial-track {
-    width: fit-content;
-    max-width: 100%;
+    width: max-content;
 }
 
-@media (max-width: 576px) {
-    .testimonial-card {
-        width: 280px;
-    }
+/* Cards responsive */
+.testimonial-card {
+    width: min(360px, 92vw);
 }
