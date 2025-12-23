@@ -131,4 +131,91 @@
         font-size: 2.2rem;
     }
 }
+/* =====================================
+   ABOUT PAGE – DARK MODE OVERRIDES
+===================================== */
+
+body.dark-mode .about-hero {
+    background: linear-gradient(135deg, #050b1e, #0b1a33);
+}
+
+/* Titles & text */
+body.dark-mode .about-title {
+    color: #ffffff !important;
+}
+
+body.dark-mode .about-text {
+    color: #b6c2e2 !important;
+}
+
+/* =====================================
+   ABOUT STATS (YOUR ISSUE AREA)
+===================================== */
+
+body.dark-mode .about-stats {
+    background: transparent;
+}
+
+body.dark-mode .stat-card {
+    background: linear-gradient(180deg, #0f1f3d, #0c1a33);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .stat-icon {
+    color: #3db8ff;
+}
+
+body.dark-mode .stat-card h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .stat-card p {
+    color: #9ca3af !important;
+}
+
+/* =====================================
+   ABOUT FEATURE SECTION
+===================================== */
+
+body.dark-mode .about-feature {
+    background: transparent;
+}
+
+body.dark-mode .about-heading {
+    color: #ffffff !important;
+}
+
+body.dark-mode .about-desc {
+    color: #b6c2e2 !important;
+}
+
+body.dark-mode .about-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .about-item h6 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .about-item p {
+    color: #9ca3af !important;
+}
+
+/* =====================================
+   BADGES (ABOUT PAGE)
+===================================== */
+
+body.dark-mode .about-badge {
+    background: rgba(61, 184, 255, 0.15) !important;
+    color: #3db8ff !important;
+}
+
+/* =====================================
+   IMAGES
+===================================== */
+
+body.dark-mode .about-image,
+body.dark-mode .about-image-shape img {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
 

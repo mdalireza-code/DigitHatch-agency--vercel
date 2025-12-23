@@ -1,51 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const projects = document.querySelectorAll(".project-item");
-    const btn = document.getElementById("showMoreBtn");
+  const projects = document.querySelectorAll(".project-item");
+  const pagination = document.getElementById("pagination");
+  const modal = new bootstrap.Modal(document.getElementById("projectModal"));
 
-    const initialCount = 9;
-    const step = 3;
+  const perPage = 6;
+  let currentPage = 1;
+  const totalPages = Math.ceil(projects.length / perPage);
 
-    let visibleCount = initialCount;
-    let expanded = false;
+  function showPage(page) {
+    currentPage = page;
 
-    // Initial state
     projects.forEach((item, index) => {
-        item.style.display = index < initialCount ? "block" : "none";
+      item.style.display =
+        index >= (page - 1) * perPage && index < page * perPage
+          ? "block"
+          : "none";
     });
 
-    btn.addEventListener("click", () => {
+    renderPagination();
+  }
 
-        // 🔽 EXPAND
-        if (!expanded) {
-            visibleCount += step;
+  function renderPagination() {
+    pagination.innerHTML = "";
 
-            projects.forEach((item, index) => {
-                if (index < visibleCount) {
-                    item.style.display = "block";
-                }
-            });
+    for (let i = 1; i <= totalPages; i++) {
+      const li = document.createElement("li");
+      li.className = `page-item ${i === currentPage ? "active" : ""}`;
+      li.innerHTML = `<a href="#" class="page-link">${i}</a>`;
 
-            // All projects visible
-            if (visibleCount >= projects.length) {
-                expanded = true;
-                btn.textContent = "Show Less";
-            }
-        }
+      li.onclick = e => {
+        e.preventDefault();
+        showPage(i);
+      };
 
-        // 🔼 COLLAPSE
-        else {
-            visibleCount = initialCount;
+      pagination.appendChild(li);
+    }
+  }
 
-            projects.forEach((item, index) => {
-                item.style.display = index < initialCount ? "block" : "none";
-            });
+  // INIT
+  showPage(1);
 
-            expanded = false;
-            btn.textContent = "See More Projects";
-
-            // Optional: scroll back to projects section
-            btn.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
+  // MODAL OPEN
+  projects.forEach(item => {
+    item.addEventListener("click", () => {
+      document.getElementById("modalTitle").textContent = item.dataset.title;
+      document.getElementById("modalCategory").textContent = item.dataset.category;
+      document.getElementById("modalDesc").textContent = item.dataset.desc;
+      document.getElementById("modalImg").src = item.dataset.img;
+      modal.show();
     });
+  });
+
 });

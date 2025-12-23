@@ -1,34 +1,118 @@
-
-html, body {
+/* ================================
+   GLOBAL RESET & BASE
+================================ */
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-:root {
-    --brand-blue: #00296b;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-
-.navbar {
-    background-color: #0B5ED7;
-}
-/* .navbar-brand{
-    color: prima;
-} */
-
-.border-brand {
-    border: 3px solid var(--brand-blue);
-}
-
 
 body {
-    background-color: #FFFFFF;
     font-family: Poppins, Clean, geometric, sans-serif;
-    scroll-behavior: smooth;
 }
+
+
+/* ================================
+   CSS VARIABLES (COLOR SYSTEM)
+================================ */
+:root {
+    /* Brand */
+    --primary: #0f2a52;
+    --primary-dark: #0b1f3a;
+    --accent: #22D3EE;
+
+    /* Neutrals */
+    --bg-light: #F8FAFF;
+    --white: #FFFFFF;
+    --border: #E5E7EB;
+
+    /* Text */
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+    background-color: var(--primary);
+}
+
+/* Logo */
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #dbeafe !important;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #38bdf8 !important;
+}
+
+section {
+    background: transparent;
+}
+
+/* Theme toggle */
+#themeToggle {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+/* Button */
+#themeToggle {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Icon */
+#themeToggle i {
+    color: var(--primary);
+}
+/* ================================
+   ICON BUTTON — MATCH PRIMARY
+================================ */
+.icon-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #38bdf8;
+    color: #ffffff;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.icon-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+
+
+/* ================================
+   IMAGE HOVER (DESKTOP ONLY)
+================================ */
 @media (hover: hover) and (pointer: fine) {
     img:hover {
         transform: scale(1.02);
@@ -36,6 +120,9 @@ body {
     }
 }
 
+/* ================================
+   HERO BUTTONS
+================================ */
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -55,18 +142,19 @@ body {
     }
 }
 
-
-/* About Section */
+/* ================================
+   ABOUT / COUNTER
+================================ */
 .counter {
     transition: color 0.3s ease;
 }
 
-
-/* Service section */
-
+/* ================================
+   SERVICE SECTION
+================================ */
 .service-card {
-    background: #fff;
-    border: 1px solid #e6e6e6;
+    background: var(--white);
+    border: 1px solid var(--border);
     border-radius: 20px;
     padding: 30px;
     transition: all 0.3s ease;
@@ -81,17 +169,20 @@ body {
     width: 56px;
     height: 56px;
     border-radius: 14px;
+    background: rgba(13, 110, 253, 0.1);
+    color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
 }
 
-/* Working Process section */
-
+/* ================================
+   PROCESS SECTION
+================================ */
 .process-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
+    background: var(--white);
+    border: 1px solid var(--border);
     border-radius: 20px;
     padding: 30px;
 }
@@ -99,28 +190,29 @@ body {
 .step-number {
     font-size: 48px;
     font-weight: 700;
-    color: #d6d6d6;
+    color: #D1D5DB;
 }
 
-/* Initial hidden state */
+/* Reveal Animation */
 .reveal-step {
     opacity: 0;
     transform: translateY(40px) scale(0.96);
     transition: all 0.5s ease;
 }
 
-/* When visible */
 .reveal-step.active {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
-/* project section */
+/* ================================
+   PROJECT SECTION
+================================ */
 .project-card {
-    background: #fff;
+    background: var(--white);
     border-radius: 20px;
     padding: 15px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
 
@@ -140,12 +232,13 @@ body {
     transition: transform 4s ease;
 }
 
-/* 🔥 AUTO SCROLL EFFECT ON HOVER */
 .project-card:hover .project-img img {
     transform: translateY(-40%);
 }
 
-/* Testimonial Slider */
+/* ================================
+   TESTIMONIAL SLIDER
+================================ */
 .testimonial-slider {
     width: 100%;
     overflow: hidden;
@@ -167,44 +260,37 @@ body {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
 }
 
-/* 🔥 FIXED CARD SIZE */
 .testimonial-card {
-    width: 360px;          /* ✅ SAME WIDTH */
-    height: 220px;         /* ✅ SAME HEIGHT */
-    background: #f9f9fb;
+    width: 360px;
+    height: 220px;
+    background: var(--white);
     border-radius: 20px;
     padding: 24px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--border);
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* avatar stays bottom */
+    justify-content: space-between;
     flex-shrink: 0;
 }
 
-/* Stars */
 .stars {
-    color: #f4b400;
+    color: #F4B400;
     font-size: 14px;
 }
 
-/* Review Text */
 .testimonial-card p {
     font-size: 15px;
-    color: #333;
-
-    display: -webkit-box;
-    /* -webkit-line-clamp: 3;  ✅ SAME TEXT HEIGHT */
-    -webkit-box-orient: vertical;
+    color: var(--text-muted);
     overflow: hidden;
 }
 
-/* Client Info */
 .client {
     display: flex;
     align-items: center;
@@ -224,17 +310,17 @@ body {
 
 .client small {
     font-size: 13px;
-    color: #6c757d;
+    color: var(--text-muted);
 }
 
-
-
-/* Pricing Section */
+/* ================================
+   PRICING SECTION
+================================ */
 .pricing-card {
-    background: #fff;
+    background: var(--white);
     border-radius: 20px;
     padding: 30px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
 
@@ -254,19 +340,14 @@ body {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-/* Contact Icons */
+/* ================================
+   CONTACT SECTION
+================================ */
 .icon-box {
     width: 48px;
     height: 48px;
-    background: #0B5ED7;
-    color: #fff;
+    background: var(--primary);
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -274,42 +355,39 @@ img {
     font-size: 18px;
 }
 
-/* Form */
 .contact-form .form-control {
     border-radius: 10px;
     padding: 12px 15px;
 }
 
 .contact-form .form-control:focus {
-    border-color: #00296b;
-    box-shadow: 0 0 0 0.15rem rgba(0, 41, 107, 0.15);
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
 }
 
-/* Footer Section */
+/* ================================
+   FOOTER
+================================ */
 .footer {
-    background: #0B5ED7;
-    color: #ffffff;
+    background: var(--primary-dark);
+    color: var(--white);
 }
 
-/* Logo */
 .footer-logo {
     font-weight: 700;
-    color: #ffffff;
+    color: var(--white);
 }
 
-/* Titles */
 .footer-title {
     font-weight: 600;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: var(--white);
 }
 
-/* Links */
 .footer-links,
 .footer-contact {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .footer-links li {
@@ -318,28 +396,26 @@ img {
 
 .footer-links a {
     text-decoration: none;
-    color: #cfd8ff;
+    color: #CFD8FF;
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
+    color: var(--white);
 }
 
-/* Contact */
 .footer-contact li {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    color: #cfd8ff;
+    color: #CFD8FF;
 }
 
 .footer-contact i {
-    color: #ffffff;
+    color: var(--white);
 }
 
-/* Social Icons */
 .footer-social a {
     display: inline-flex;
     align-items: center;
@@ -347,46 +423,41 @@ img {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #ffffff;
-    color: #00296b;
+    background: var(--white);
+    color: var(--primary-dark);
     margin-right: 10px;
     transition: transform 0.3s, background 0.3s;
 }
 
 .footer-social a:hover {
-    background: #cfd8ff;
+    background: #CFD8FF;
     transform: translateY(-3px);
 }
 
-/* Bottom Bar */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    color: #cfd8ff;
+    color: #CFD8FF;
     font-size: 14px;
 }
 
+/* ================================
+   FOOTER RESPONSIVE
+================================ */
 @media (max-width: 768px) {
-
     .footer {
         text-align: center;
-    }
-
-    .footer-social a {
-        margin: 0 6px 10px;
     }
 
     .footer-contact li {
         justify-content: center;
     }
 
-    .footer-bottom {
-        font-size: 13px;
-        padding-top: 15px;
+    .footer-social a {
+        margin: 0 6px 10px;
     }
 }
 
 @media (max-width: 576px) {
-
     .footer {
         padding-top: 40px;
     }
@@ -396,3 +467,215 @@ img {
     }
 }
 
+/* =====================================
+   DARK MODE BASE
+===================================== */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+/* Smooth transition */
+body,
+.navbar,
+section,
+.card,
+.service-card,
+.process-card,
+.project-card,
+.pricing-card,
+.testimonial-card,
+.contact-info,
+.contact-form {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+body.dark-mode .navbar {
+    background-color: #020617 !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #38bdf8 !important;
+}
+
+/* Toggle button */
+body.dark-mode #themeToggle {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* =====================================
+   SECTIONS
+===================================== */
+body.dark-mode section {
+    background-color: #0f172a;
+}
+
+/* =====================================
+   HEADINGS & TEXT
+===================================== */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #f9fafb;
+}
+
+body.dark-mode p,
+body.dark-mode small,
+body.dark-mode .text-muted {
+    color: #9ca3af !important;
+}
+
+/* =====================================
+   BADGES
+===================================== */
+body.dark-mode .badge {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+body.dark-mode .service-card,
+body.dark-mode .process-card,
+body.dark-mode .project-card,
+body.dark-mode .pricing-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form,
+body.dark-mode .bg-light {
+    background-color: #111827 !important;
+    border-color: #1f2937 !important;
+}
+
+/* =====================================
+   ICONS
+===================================== */
+body.dark-mode .icon,
+body.dark-mode .icon-box {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+body.dark-mode .btn-primary {
+    background-color: #38bdf8;
+    border-color: #38bdf8;
+    color: #020617;
+}
+
+body.dark-mode .btn-outline-primary {
+    color: #38bdf8;
+    border-color: #38bdf8;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #38bdf8;
+    color: #020617;
+}
+
+/* =====================================
+   FORMS
+===================================== */
+body.dark-mode .form-control {
+    background-color: #020617;
+    color: #e5e7eb;
+    border-color: #1f2937;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #9ca3af;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #020617;
+    color: #e5e7eb;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 0.15rem rgba(56, 189, 248, 0.25);
+}
+
+/* =====================================
+   TESTIMONIAL STARS
+===================================== */
+body.dark-mode .stars {
+    color: #facc15;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+body.dark-mode .footer {
+    background-color: #020617;
+}
+
+body.dark-mode .footer-logo,
+body.dark-mode .footer-title {
+    color: #f9fafb;
+}
+
+body.dark-mode .footer-links a,
+body.dark-mode .footer-contact li {
+    color: #9ca3af;
+}
+
+body.dark-mode .footer-links a:hover {
+    color: #38bdf8;
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    color: #9ca3af;
+}
+
+/* =====================================
+   IMAGES (SUBTLE DARK TUNING)
+===================================== */
+body.dark-mode img {
+    filter: brightness(0.9) contrast(1.05);
+}
+
+/* =====================================
+   FORCE TEXT VISIBILITY (BOOTSTRAP OVERRIDES)
+===================================== */
+body.dark-mode .text-dark {
+    color: #f9fafb !important;
+}
+
+body.dark-mode .text-muted {
+    color: #9ca3af !important;
+}
+
+/* Badges that were light in light mode */
+body.dark-mode .badge.bg-light {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+}
+
+/* Hero specific text */
+body.dark-mode .hero-section h1 {
+    color: #f9fafb !important;
+}
+
+body.dark-mode .hero-section p {
+    color: #cbd5f5 !important;
+}
+
+/* Small helper text */
+body.dark-mode small {
+    color: #9ca3af !important;
+}

@@ -122,15 +122,23 @@ document.addEventListener("DOMContentLoaded", () => {
     steps.forEach(step => observer.observe(step));
 });
 
-// testimonial Section
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.getElementById("testimonialTrack");
+// ================================
+// DARK MODE TOGGLE
+// ================================
+const toggleBtn = document.getElementById("themeToggle");
+const body = document.body;
 
-    // Clone testimonials for infinite loop
-    const cards = [...track.children];
-    cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        track.appendChild(clone);
-    });
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    const isDark = body.classList.contains("dark-mode");
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
