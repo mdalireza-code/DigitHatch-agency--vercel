@@ -1,9 +1,7 @@
 /* ================================
    GLOBAL RESET & BASE
 ================================ */
-html,
-body {
-    max-width: 100%;
+html{
     overflow-x: hidden;
 }
 
@@ -20,6 +18,7 @@ img {
 }
 
 body {
+    max-width: 100%;
     font-family: Poppins, Clean, geometric, sans-serif;
 }
 
