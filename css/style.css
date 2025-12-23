@@ -1,9 +1,15 @@
 /* ================================
    GLOBAL RESET & BASE
 ================================ */
-html{
-    overflow-x: hidden;
+body {
+    max-width: 100%;
 }
+
+/* Optional wrapper if needed */
+/* .page-wrapper {
+    overflow-x: hidden;
+} */
+
 
 * {
     box-sizing: border-box;
@@ -18,7 +24,6 @@ img {
 }
 
 body {
-    max-width: 100%;
     font-family: Poppins, Clean, geometric, sans-serif;
 }
 
