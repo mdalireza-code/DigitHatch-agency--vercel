@@ -121,3 +121,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     steps.forEach(step => observer.observe(step));
 });
+
+// testimonial Section
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("testimonialTrack");
+
+    // Clone testimonials for infinite loop
+    const cards = [...track.children];
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        track.appendChild(clone);
+    });
+});
+
