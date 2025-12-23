@@ -1,14 +1,11 @@
 /* ================================
    GLOBAL RESET & BASE
 ================================ */
+html,
 body {
-    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden !important;
 }
-
-/* Optional wrapper if needed */
-/* .page-wrapper {
-    overflow-x: hidden;
-} */
 
 
 * {
@@ -682,4 +679,35 @@ body.dark-mode .hero-section p {
 /* Small helper text */
 body.dark-mode small {
     color: #9ca3af !important;
+}
+
+
+/* ================================
+   MOBILE OVERFLOW FIX (FINAL)
+================================ */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+.container,
+.container-fluid,
+section {
+    overflow-x: hidden;
+}
+
+.testimonial-slider {
+    overflow-x: hidden;
+}
+
+.testimonial-track {
+    width: fit-content;
+    max-width: 100%;
+}
+
+@media (max-width: 576px) {
+    .testimonial-card {
+        width: 280px;
+    }
 }
